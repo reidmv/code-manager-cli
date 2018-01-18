@@ -26,8 +26,7 @@ Available subcommands:
   deploy <environment>
     Roughly equivalent to "puppet code deploy <env>". Invokes r10k to
     deploy the environment to the staging-dir, invokes file-sync to
-    commit and sync the files, then flushes puppetserver's environment
-    cache.
+    commit and to sync the code-dir.
 
   commit
     Commits all files in code-staging and deploys them.
@@ -59,6 +58,5 @@ Available subcommands:
 
   force-sync
     Calls the file-sync client API to force the code-dir to be updated
-    with the latest available code from the storage service. Does not 
-    flush the puppetserver environment cache.
+    with the latest available code from the storage service.
 ```

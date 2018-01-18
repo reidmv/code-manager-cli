@@ -81,10 +81,6 @@ function commit()
   # before we take any action that depends on that task being done.
   fs_commit
   fs_force_sync
-
-  # Perform a call to the puppetserver to flush the environment cache. This
-  # ensures the newly deployed code is loaded.
-  flush_environment_cache
 }
 
 function cm_r10k()
