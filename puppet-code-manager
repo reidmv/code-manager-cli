@@ -85,9 +85,8 @@ function commit()
 
 function cm_r10k()
 {
-  su - pe-puppet -s /bin/bash -c "/opt/puppetlabs/bin/r10k \
-    -c /opt/puppetlabs/server/data/code-manager/r10k.yaml \
-    $@"
+  su - pe-puppet -s /bin/bash -c "/opt/puppetlabs/bin/r10k $@ \
+    -c /opt/puppetlabs/server/data/code-manager/r10k.yaml"
 }
 
 function file_sync()
