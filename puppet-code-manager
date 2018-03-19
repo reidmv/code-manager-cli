@@ -156,7 +156,8 @@ function curl_wrapper()
   output=$(curl "$@")
   exitcode=$?
   if [ "$g_verbose" = 'true' ]; then
-    echo "output: $output"
+    echo "output json:"
+    echo "$output" | python -m json.tool || echo "raw output: $output"
     echo "exitcode: $exitcode"
     echo
   fi
